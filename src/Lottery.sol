@@ -6,7 +6,7 @@ contract Lottery {
     address payable public manager;
     address payable [] public players;
     
-    function LotteryManager() public {
+    function LotteryManager() public payable {
         manager = payable(msg.sender);
     }
     
